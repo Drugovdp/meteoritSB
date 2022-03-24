@@ -1,0 +1,119 @@
+.position_fixed {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+
+    .block-open {
+        flex-basis: 10%;
+
+        .click {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            margin: 1%;
+            border: 1px solid #F9671C;
+            border-radius: 50% 50%;
+            background-color: rgb(255, 255, 255);
+            cursor: pointer;
+    
+            .close {
+                height: 48px;
+                width: 2px;
+                background-color: rgb(0, 0, 0);
+            }
+            
+            .close:before, .close:after {
+                position: absolute;
+                content: ' ';
+                top: 17%;
+                left: 48%;
+                height: 68%;
+                width: 2px;
+                background-color: #F9671C;
+            }
+            
+            .close:before {
+                transform: rotate(45deg);
+            }
+            
+            .close:after {
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+    h2 {
+        color: #F9671C;
+        text-align: center;
+    }
+
+    .block_carusel {
+        position: relative;
+        text-align: center;
+
+        .scrollLeft {
+            left: 50px;
+            background-image: url("./img/left_arrow.png");
+        }
+        
+        .scrolRight {
+            right: 50px;
+            background-image: url("./img/right_arrow.png");
+        }
+        
+        .scrolRight, .scrollLeft {
+            content: ' ';
+            width: 50px;
+            height: 30px;
+            position: absolute;
+            top: 100%;
+            background-color: #ffffff;
+            background-size: 30px 30px;
+            background-position: center;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .items_carusel {
+            position: relative;
+            width: 90%;
+            height: 320px;
+            margin: 0 auto;
+            overflow: hidden;
+
+            .wrap {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: flex;
+                width: 2000px;
+                height: inherit;
+                gap: 5px;
+                align-items: center;
+            }
+            
+            .item {
+                border: 1px solid #F9671C;
+                height: 70%;
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: #ffffff;
+            }
+        }
+    }
+}
+
+
+
+
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleanime.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="styleAnime">
+        <img src="./img/cupolcamera.png" alt="picture">
+        <div class="redSignal"></div>
+    </div>
+    <script>
+        let i = 1;
+        setInterval(() => {
+
+            if (i == 1) {
+                document.getElementsByClassName('redSignal')[0].style.display = 'none';
+                i++;
+            } else {
+                document.getElementsByClassName('redSignal')[0].style.display = 'block';
+                i = 1;
+            }
+
+        }, 1000);
+    </script>
+</body>
+
+</html>
